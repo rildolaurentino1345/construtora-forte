@@ -1,0 +1,570 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #0F2A3D;
+    --cor-secundario: #1F3F5B;
+    --cor-tercearia: #F59E0B;
+    --cor-texto: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: azure;
+
+}
+
+.interface {
+    max-width: 1980px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*Header*/
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 0;
+
+}
+
+header .logo {
+    display: flex;
+    flex-flow: wrap;
+    gap: 5px;
+    align-items: end;
+}
+
+header .logo i {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--cor-tercearia);
+}
+
+header .marca {
+    display: flex;
+    flex-direction: column;
+}
+
+header .marca span {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-right: 50px;
+    list-style: none;
+}
+
+nav li>a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+}
+
+nav li>a:hover {
+    color: var(--cor-tercearia);
+    border-bottom: 2px solid var(--cor-tercearia);
+
+}
+
+.btn {
+    padding: 15px 2%;
+    background-color: var(--cor-tercearia);
+    transition: background-color .3s;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.btn-secundario {
+    padding: 15px 2%;
+    background-color: transparent;
+    transition: background-color .3s;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.btn-secundario:hover {
+    background-color: var(--cor-principal);
+    border: 2px solid var(--cor-tercearia);
+}
+
+/* seção hero*/
+section.hero {
+    background: url('../assets/imagens/casa_luxo.jpg') center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+section.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+section.hero .interface {
+    position: relative;
+    z-index: 1;
+}
+
+section.hero .hero-flex {
+    margin-left: 100px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section.hero .hero-titulo p {
+    text-align: justify;
+    font-size: 1.2em;
+    padding: 20px 0;
+    color: var(--cor-texto);
+}
+
+section.hero .hero-titulo h1 {
+    color: var(--cor-tercearia);
+    text-shadow: 50px 50px 50px black;
+    font-size: 1em;
+    padding: 20px 0;
+}
+
+section.hero .hero-titulo h2 {
+    text-shadow: 50px 50px 50px black;
+    font-size: 2.5em;
+    color: var(--cor-texto);
+}
+
+section.hero .botao {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+/*SERVIÇOS*/
+section.servicos {
+    padding: 0 100px;
+
+}
+
+section.servicos .interface .titulo {
+    text-align: center;
+    margin: 50px 0;
+}
+.titulo-2 {
+    width: 200px;
+}
+
+section.servicos .interface .titulo h2 {
+    color: #F59E0B;
+    font-size: 1em;
+    padding-bottom: 20px;
+}
+
+section.servicos .interface .titulo h3 {
+    font-size: 2em;
+}
+
+section.servicos .interface .servico-itens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+}
+
+section.servicos .interface .servico-itens .itens {
+    background-color: rgba(240, 255, 255, 0.705);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 10px 80px 10px;
+}
+
+section.servicos .interface .servico-itens .itens span i {
+    color: #D97706;
+    font-size: 3em;
+}
+
+section.servicos .interface .servico-itens h2 {
+    color: black;
+}
+
+/*Sobre*/
+section.sobre {
+    padding: 0 100px;
+}
+
+section.sobre .interface {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+section.sobre .interface .img-sobre {
+    background: black url(../assets/imagens/predio.jpg) center center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    flex: 1;
+    min-height: 500px;
+    display:flex;
+    align-items: flex-end;
+    
+
+}
+
+div.experiencia {
+    display: inline-block;
+    padding: 20px;
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.conteudo-sobre {
+    flex: 1;
+    min-width: 350px;
+    padding: 20px;
+
+}
+
+section.sobre .interface .sobre-titulo h2 {
+    color: #F59E0B;
+}
+
+section.sobre .interface .sobre-titulo h3 {
+    font-size: 2.4em;
+}
+
+section.sobre .interface .sobre-titulo p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    padding-top: 30px;
+}
+
+section.sobre .interface .sobre-itens {
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+    margin: 50px 0;
+}
+
+section.sobre .interface .sobre-itens .itens-s span i {
+    font-size: 2em;
+}
+
+section.sobre .interface .sobre-itens .itens-s {
+    border-right: 2px solid #0f2a3d93;
+    padding-right: 10px;
+}
+
+section.sobre .interface .sobre-itens .itens-s h2 {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+
+section.sobre .interface .sobre-itens .itens-s p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/*Projetos*/
+section.projetos {
+    margin-bottom: 25px;
+    padding: 0 100px;
+}
+
+section.projetos .projeto-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section.projetos .projeto-titulo h2 {
+    color: #D97706;
+}
+
+section.projetos .projeto-titulo h3 {
+    font-size: 2.4em;
+}
+
+section.projetos .projeto-links {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+}
+
+section.projetos .projeto-links a {
+    background-color: transparent;
+    transition: background-color .3s;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-principal);
+    margin-right:20px;
+    text-decoration: none;
+    color: black;
+}
+
+section.projetos .projeto-links a:hover {
+    color: var(--cor-texto);
+    background-color: var(--cor-tercearia);
+    border: 1px solid var(--cor-texto);
+}
+
+section.projetos .projeto-img {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)) ;
+    gap: 20px;
+    
+}
+section.projetos .projeto-img .projeto-imagem img {
+    width:100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*Footer*/
+footer {
+    background-color: #0F2A3D;
+    color: white;
+    padding: 30px 20px;
+    
+}
+
+footer .interface {
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+footer .footer-itens {
+    display: flex;
+    gap: 10px;
+}
+
+footer .footer-itens div span i {
+    font-size: 3em;
+    color: #D97706;
+}
+footer .marca-registrada {
+    padding: 0px 20px;
+    text-align: center;
+}
+footer .marca-registrada  a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    cursor: pointer;
+}
+footer .marca-registrada  a:hover {
+    color:#4795da;
+} 
+
+
+
+@media (max-width: 1024px) {
+    nav ul li {
+        margin-right: 30px;
+    }
+
+    .btn {
+        padding: 12px 2%;
+    }
+
+}
+
+@media (max-width: 821px) {
+    header .interface {
+        align-items: center;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-principal);
+        display: none;
+        padding: 20px;
+        z-index: 999;
+
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #menu-toggle {
+        order: 1;
+    }
+
+    section.hero .hero-flex {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+    section.servicos {
+        padding: 0 50px;
+    }
+    section.servicos .interface .servico-itens .itens span i {
+    font-size: 2.5em;
+    }
+   
+    section.sobre {
+        padding: 0 10px;
+    }
+
+    section.sobre .interface {
+        flex-direction: column-reverse;
+    }
+
+    section.sobre .interface .img-sobre {
+        min-height: 500px;
+        height: 400px;
+    }
+    section.sobre .interface .sobre-itens {
+    flex-wrap: wrap;
+    }
+    section.sobre .interface .sobre-itens .itens-s {
+    border-right: none;
+    border-bottom: 1px solid #0f2a3d93;
+    padding-bottom: 20px;
+    }
+    section.sobre .interface .sobre-titulo h3 {
+    font-size: 1.8em;
+    }
+    section.sobre .interface .sobre-titulo {
+    text-align: center;
+    }
+
+    section.projetos {
+        padding: 0 10px;
+    }
+    section.projetos .projeto-img {
+        grid-template-columns: 1fr;
+    }
+    
+
+}
+@media (max-width: 539px) {
+    header .logo i {
+        font-size: 2em;
+    }
+    .btn- {
+        display: none;
+    }
+    section.hero .hero-titulo p {
+        text-align: left;
+    }
+
+    section.servicos {
+        padding: 0 10px;
+    }
+     section.servicos .interface .servico-itens .itens span i {
+    font-size: 2em;
+    }
+
+    section.sobre .interface .img-sobre {
+        height: auto;
+        
+    }
+
+    section.sobre .interface .sobre-titulo h3 {
+        font-size: 1.5em;
+    }
+
+    section.sobre .interface .sobre-titulo p {
+        font-size: 1em;
+    }
+
+    section.sobre .interface .sobre-itens {
+        flex-direction: column;
+    }
+
+    section.sobre .interface .sobre-itens .itens-s {
+        border-right: none;
+        border-bottom: 1px solid #0f2a3d93;
+        padding-bottom: 20px;
+    }
+       .conteudo-sobre {
+        min-width: auto;
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer .marca-regitrada  {
+        text-align: left;
+    }
+
+}
