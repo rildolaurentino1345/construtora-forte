@@ -346,7 +346,8 @@ section.projetos .projeto-links {
     padding: 15px 30px;
     display: flex;
     flex-flow: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 
 section.projetos .projeto-links a {
