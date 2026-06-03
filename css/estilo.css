@@ -201,6 +201,7 @@ section.servicos .interface .titulo {
     text-align: center;
     margin: 50px 0;
 }
+
 .titulo-2 {
     width: 200px;
 }
@@ -258,9 +259,9 @@ section.sobre .interface .img-sobre {
     border-radius: 10px;
     flex: 1;
     min-height: 500px;
-    display:flex;
+    display: flex;
     align-items: flex-end;
-    
+
 
 }
 
@@ -357,7 +358,7 @@ section.projetos .projeto-links a {
     padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid var(--cor-principal);
-    margin-right:20px;
+    margin-right: 20px;
     text-decoration: none;
     color: black;
 }
@@ -370,12 +371,13 @@ section.projetos .projeto-links a:hover {
 
 section.projetos .projeto-img {
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)) ;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    
+
 }
+
 section.projetos .projeto-img .projeto-imagem img {
-    width:100%;
+    width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 10px;
@@ -386,7 +388,7 @@ footer {
     background-color: #0F2A3D;
     color: white;
     padding: 30px 20px;
-    
+
 }
 
 footer .interface {
@@ -407,18 +409,21 @@ footer .footer-itens div span i {
     font-size: 3em;
     color: #D97706;
 }
+
 footer .marca-registrada {
     padding: 0px 20px;
     text-align: center;
 }
-footer .marca-registrada  a {
+
+footer .marca-registrada a {
     color: var(--cor-texto);
     text-decoration: none;
     cursor: pointer;
 }
-footer .marca-registrada  a:hover {
-    color:#4795da;
-} 
+
+footer .marca-registrada a:hover {
+    color: #4795da;
+}
 
 
 
@@ -482,10 +487,15 @@ footer .marca-registrada  a:hover {
     section.servicos {
         padding: 0 50px;
     }
-    section.servicos .interface .servico-itens .itens span i {
-    font-size: 2.5em;
+
+    section.servicos .interface .servico-itens .itens {
+        padding: 10px 10px 30px 10px;
     }
-   
+
+    section.servicos .interface .servico-itens .itens span i {
+        font-size: 2.5em;
+    }
+
     section.sobre {
         padding: 0 10px;
     }
@@ -498,37 +508,45 @@ footer .marca-registrada  a:hover {
         min-height: 500px;
         height: 400px;
     }
+
     section.sobre .interface .sobre-itens {
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     }
+
     section.sobre .interface .sobre-itens .itens-s {
-    border-right: none;
-    border-bottom: 1px solid #0f2a3d93;
-    padding-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid #0f2a3d93;
+        padding-bottom: 20px;
     }
+
     section.sobre .interface .sobre-titulo h3 {
-    font-size: 1.8em;
+        font-size: 1.8em;
     }
+
     section.sobre .interface .sobre-titulo {
-    text-align: center;
+        text-align: center;
     }
 
     section.projetos {
         padding: 0 10px;
     }
+
     section.projetos .projeto-img {
         grid-template-columns: 1fr;
     }
-    
+
 
 }
+
 @media (max-width: 539px) {
     header .logo i {
         font-size: 2em;
     }
+
     .btn- {
         display: none;
     }
+
     section.hero .hero-titulo p {
         text-align: left;
     }
@@ -536,13 +554,14 @@ footer .marca-registrada  a:hover {
     section.servicos {
         padding: 0 10px;
     }
-     section.servicos .interface .servico-itens .itens span i {
-    font-size: 2em;
+
+    section.servicos .interface .servico-itens .itens span i {
+        font-size: 2em;
     }
 
     section.sobre .interface .img-sobre {
         height: auto;
-        
+
     }
 
     section.sobre .interface .sobre-titulo h3 {
@@ -562,13 +581,14 @@ footer .marca-registrada  a:hover {
         border-bottom: 1px solid #0f2a3d93;
         padding-bottom: 20px;
     }
-       .conteudo-sobre {
+
+    .conteudo-sobre {
         min-width: auto;
         width: 100%;
         padding: 10px;
     }
 
-    footer .marca-regitrada  {
+    footer .marca-regitrada {
         text-align: left;
     }
 
