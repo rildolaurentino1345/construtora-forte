@@ -351,10 +351,11 @@ section.projetos .projeto-links {
 }
 
 section.projetos .projeto-links a {
+    width: 150px;
     background-color: transparent;
     transition: background-color .3s;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid var(--cor-principal);
     margin-right:20px;
     text-decoration: none;
