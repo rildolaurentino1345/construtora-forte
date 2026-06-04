@@ -91,14 +91,14 @@ nav ul li {
     list-style: none;
 }
 
-nav li>a {
+nav li > a {
     color: white;
     text-decoration: none;
     padding-bottom: 10px;
     border-bottom: 2px solid transparent;
 }
 
-nav li>a:hover {
+nav li > a:hover {
     color: var(--cor-tercearia);
     border-bottom: 2px solid var(--cor-tercearia);
 
@@ -168,7 +168,7 @@ section.hero .hero-flex {
 
 section.hero .hero-titulo p {
     text-align: justify;
-    font-size: 1.2em;
+    font-size: clamp(1rem, 2vw, 1.125rem);
     padding: 10px 0;
     color: var(--cor-texto);
 }
@@ -229,7 +229,7 @@ section.servicos .interface .servico-itens .itens {
     background-color: rgba(240, 255, 255, 0.705);
     border: 1px solid black;
     border-radius: 5px;
-    padding: 10px 10px 80px 10px;
+    padding: 10px 10px 40px 10px;
 }
 
 section.servicos .interface .servico-itens .itens span i {
@@ -405,7 +405,15 @@ footer .interface {
 
 footer .footer-itens {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    min-width: 250px;
+}
+footer .footer-itens h2 {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+}
+footer .footer-itens p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 footer .footer-itens div span i {
@@ -418,10 +426,14 @@ footer .marca-registrada {
     text-align: center;
 }
 
+footer .marca-registrada p {
+  font-size: .7em;  
+}
 footer .marca-registrada a {
     color: var(--cor-texto);
     text-decoration: none;
     cursor: pointer;
+    
 }
 
 footer .marca-registrada a:hover {
@@ -603,6 +615,10 @@ footer .marca-registrada a:hover {
 
     .btn- {
         display: none;
+    }
+     section.hero {
+        min-height: 80vh;
+        
     }
 
     section.hero .hero-titulo p {
