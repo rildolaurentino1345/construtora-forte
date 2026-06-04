@@ -125,7 +125,9 @@ nav li>a:hover {
     font-weight: bold;
     border: 2px solid white;
 }
-
+.btn-secundario i {
+    color: var(--cor-tercearia);
+}
 .btn:hover {
     background-color: transparent;
     border: 2px solid white;
@@ -167,15 +169,15 @@ section.hero .hero-flex {
 section.hero .hero-titulo p {
     text-align: justify;
     font-size: 1.2em;
-    padding: 20px 0;
+    padding: 10px 0;
     color: var(--cor-texto);
 }
 
 section.hero .hero-titulo h1 {
     color: var(--cor-tercearia);
     text-shadow: 50px 50px 50px black;
-    font-size: 1em;
-    padding: 20px 0;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 5px 0;
 }
 
 section.hero .hero-titulo h2 {
@@ -187,8 +189,8 @@ section.hero .hero-titulo h2 {
 section.hero .botao {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
-    gap: 15px;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 /*SERVIÇOS*/
@@ -398,6 +400,7 @@ footer .interface {
     flex-flow: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
+    
 }
 
 footer .footer-itens {
@@ -411,7 +414,7 @@ footer .footer-itens div span i {
 }
 
 footer .marca-registrada {
-    padding: 0px 20px;
+    
     text-align: center;
 }
 
