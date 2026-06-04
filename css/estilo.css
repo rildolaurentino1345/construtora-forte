@@ -142,7 +142,8 @@ nav li > a:hover {
 section.hero {
     background: url('../assets/imagens/casa_luxo.jpg') center center no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
+    padding-top: 80px;
     display: flex;
     align-items: center;
     position: relative;
