@@ -180,7 +180,7 @@ section.hero .hero-titulo h1 {
 
 section.hero .hero-titulo h2 {
     text-shadow: 50px 50px 50px black;
-    font-size: 2.5em;
+    font-size: clamp(2rem, 5vw, 3rem);
     color: var(--cor-texto);
 }
 
@@ -304,7 +304,7 @@ section.sobre .interface .sobre-itens {
 }
 
 section.sobre .interface .sobre-itens .itens-s span i {
-    font-size: 2em;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 section.sobre .interface .sobre-itens .itens-s {
@@ -319,7 +319,7 @@ section.sobre .interface .sobre-itens .itens-s h2 {
 
 section.sobre .interface .sobre-itens .itens-s p {
     font-size: 1em;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
 /*Projetos*/
@@ -348,7 +348,7 @@ section.projetos .projeto-links {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 section.projetos .projeto-links a {
@@ -358,9 +358,9 @@ section.projetos .projeto-links a {
     padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid var(--cor-principal);
-    margin-right: 20px;
     text-decoration: none;
     color: black;
+    gap: 20px;
 }
 
 section.projetos .projeto-links a:hover {
@@ -406,7 +406,7 @@ footer .footer-itens {
 }
 
 footer .footer-itens div span i {
-    font-size: 3em;
+    font-size: clamp(2em, 4vw, 3em);
     color: #D97706;
 }
 
@@ -434,6 +434,39 @@ footer .marca-registrada a:hover {
 
     .btn {
         padding: 12px 2%;
+    }
+
+    section.hero .hero-flex {
+        margin-left: 20px;
+    }
+    section.sobre .interface {
+        gap: 5px;
+    }
+    section.hero .hero-flex {
+        padding: 10px;
+    }
+
+    section.sobre .interface .img-sobre {
+        min-height: 700px;
+        height: 500px;
+    }
+    section.sobre .interface .sobre-itens .itens-s {
+        border-right: none;
+        border-bottom: 1px solid #0f2a3d93;
+        padding-bottom: 20px;
+    }
+
+    section.servicos {
+        padding: 0 20px;
+
+    }
+
+    section.sobre {
+        padding: 0 20px;
+    }
+
+    section.projetos {
+        padding: 0 20px;
     }
 
 }
@@ -477,15 +510,36 @@ footer .marca-registrada a:hover {
         order: 1;
     }
 
+    section.hero {
+        min-height: 60vh;
+    }
+
     section.hero .hero-flex {
-        margin-left: 0;
+        margin-left: 10px;
+    }
+
+    section.servicos .interface .servico-itens .itens {
+        padding: 10px 10px 30px 10px;
+    }
+
+        section.sobre .interface {
+        flex-direction: column-reverse;
+    }
+
+    section.sobre .interface .img-sobre {
+        min-height: 500px;
+        height: 400px;
+    }
+
+    section.projetos .projeto-links a {
+        
     }
 
 }
 
 @media (max-width: 768px) {
     section.servicos {
-        padding: 0 50px;
+        padding: 0 20px;
     }
 
     section.servicos .interface .servico-itens .itens {
@@ -528,7 +582,7 @@ footer .marca-registrada a:hover {
     }
 
     section.projetos {
-        padding: 0 10px;
+        padding: 0 20px;
     }
 
     section.projetos .projeto-img {
@@ -536,9 +590,10 @@ footer .marca-registrada a:hover {
     }
 
 
+
 }
 
-@media (max-width: 539px) {
+@media (max-width: 541px) {
     header .logo i {
         font-size: 2em;
     }
@@ -581,6 +636,10 @@ footer .marca-registrada a:hover {
         border-bottom: 1px solid #0f2a3d93;
         padding-bottom: 20px;
     }
+    section.projetos .projeto-links {
+        gap: 10px;
+    }
+
 
     .conteudo-sobre {
         min-width: auto;
